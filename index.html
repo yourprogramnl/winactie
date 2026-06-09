@@ -97,19 +97,19 @@
   .reviews-sec{padding:6px 0 2px;text-align:center}
   .gbadge{display:inline-flex;align-items:center;gap:10px;margin:0 auto 18px;color:var(--muted-txt);font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:12px}
   .gbadge .g{width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--gold-grad);color:#211803;font-family:'Archivo',sans-serif;font-weight:900;font-size:14px}
-  .gbadge .rev-rating{color:var(--gold-2)}
-  .rev-viewport{overflow:hidden;max-width:620px;margin:0 auto;border:1px solid var(--line);border-radius:16px;background:var(--card)}
-  .rev-track{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+  .rev-viewport{overflow:hidden;max-width:620px;margin:0 auto;border:1px solid var(--line);border-radius:16px;background:var(--card);transition:height .4s ease}
+  .rev-track{display:flex;align-items:flex-start;transition:transform .6s cubic-bezier(.4,0,.2,1)}
   .rev-card{min-width:100%;padding:26px 28px;box-sizing:border-box}
   .rev-stars{color:var(--gold-2);letter-spacing:2px;font-size:16px}
-  .rev-text{margin:12px 0 16px;color:var(--cream);font-size:16px;line-height:1.6;min-height:104px}
-  .rev-meta{display:flex;align-items:center;gap:10px;justify-content:center;text-align:left}
+  .rev-text{margin:12px 0 16px;color:var(--cream);font-size:15.5px;line-height:1.6;text-align:left}
+  .rev-meta{display:flex;align-items:center;gap:10px;justify-content:center}
   .rev-ava{width:36px;height:36px;border-radius:50%;background:var(--gold-grad);color:#211803;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;flex:none}
   .rev-name{font-family:'Archivo',sans-serif;font-weight:700;font-size:14.5px}
-  .rev-when{color:var(--muted-txt);font-size:13px}
-  .rev-dots{display:flex;gap:8px;justify-content:center;margin-top:16px}
+  .rev-dots{display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap}
   .rev-dot{width:8px;height:8px;border-radius:50%;border:0;background:rgba(242,235,220,.25);cursor:pointer;padding:0;transition:background .2s,transform .2s}
   .rev-dot.active{background:var(--gold-2);transform:scale(1.25)}
+  .rev-all{display:inline-block;margin-top:18px;color:var(--gold-2);text-decoration:none;font-family:'Archivo',sans-serif;font-weight:700;font-size:13.5px;letter-spacing:.02em;border-bottom:1px solid var(--line);padding-bottom:2px}
+  .rev-all:hover{color:var(--gold-1)}
   footer{padding:50px 0 64px;text-align:center}
   .ffu{margin-top:16px;font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:.22em;text-transform:uppercase;font-size:12.5px;color:var(--gold-2)}
   .foot-meta{color:var(--muted-txt);font-size:13.5px;margin-top:10px}
@@ -148,9 +148,10 @@
 
 <div class="wrap">
   <section class="reviews-sec">
-    <div class="gbadge"><span class="g">G</span><span>Reviews van onze atleten op Google</span><span class="rev-rating" id="revRating"></span></div>
+    <div class="gbadge"><span class="g">G</span><span>Reviews van onze atleten op Google</span></div>
     <div class="rev-viewport" id="revVp"><div class="rev-track" id="revTrack"></div></div>
     <div class="rev-dots" id="revDots"></div>
+    <a class="rev-all" href="https://g.page/r/CYn4h4HSQtxBEAE/review" target="_blank" rel="noopener">Klik hier voor alle reviews &rarr;</a>
   </section>
 </div>
 
@@ -262,42 +263,38 @@
 
 <script>
 (function(){
-  /* ===== AANPASBAAR — vul hier je echte Google-reviews in ===== */
-  var INTERVAL_MS = 5000;
-  var RATING = "";
+  var INTERVAL_MS = 6500;
   var REVIEWS = [
-    { name:"Voorbeeld 1", stars:5, when:"Vervang door echte review",
-      text:"Plak hier een echte Google-review over je ervaring met YourProgram en pas de naam hierboven aan." },
-    { name:"Voorbeeld 2", stars:5, when:"Vervang door echte review",
-      text:"Tweede echte review hier. Voeg zoveel reviews toe als je wilt door regels in deze lijst bij te zetten." },
-    { name:"Voorbeeld 3", stars:5, when:"Vervang door echte review",
-      text:"Derde echte review hier. Tip: kies je mooiste, niet te lange reviews voor de beste weergave." }
+    {name:"Esmay van Vianen", text:"7 jaar top online coaching via YourProgram!\n\nIk maak inmiddels al 7 jaar gebruik van de online coaching van YourProgram, en ik ben nog altijd ontzettend tevreden. De begeleiding is persoonlijk, deskundig en altijd afgestemd op mijn doelen en situatie."},
+    {name:"Marjolijn", text:"Sinds een aantal maanden volg ik coaching programma bij Yourprogram. Omdat ik graag beter en doelgerichter wilde trainen. En daarnaast ook beter kunnen mee draaien op RX wedstrijden. De coaching word goed op je afgestemd. En er word goed met je mee gedacht. De teamtrainingen zijn voor mij ook een groot pluspunt. Maar de fijne sfeer binnen deze community maken het gehele plaatje compleet."},
+    {name:"Jelle van Sante", text:"Ik train nu vier maanden onder begeleiding bij Your Program en dit bevalt super! Mijn coach weet precies wat ik nodig heb en past hier mijn trainingen op aan. In deze korte tijd heb ik al meerdere persoonlijke kracht records verbroken, dit motiveert ontzettend! Ook zijn de teamtrainingen altijd super gezellig, de gedeelde passie en discipline zorgt hier voor! Als je klaar bent om het trainen serieuzer te nemen en klaar bent voor de volgende stap zal ik zeker eens contact opnemen."},
+    {name:"Andor Molter", text:"Sinds 3 maanden train ik bij/met Your Program. Sinds een jaar of 8 doe ik CrossFit competities en hoewel ik goed mee kan komen op A wedstrijden (BOTN, LLTD) merkte ik dat ik met mijn eigen aanpak aan mijn plafond zat. Ik ben zelf L2 coach (CrossFit) en eigenaar van een CrossFit gym. De programmering die Michel specifiek voor mij maakt is spot on. Ik merk nu al erg veel verschil in kracht en ook in techniek, ik train slimmer en zeker ook veiliger. In het YP team zit zo veel kennis en kunde en er heerst een zeer goede vibe. Michel denkt zo goed mee, is zeer motiverend en stelt zijn programmering zeer zorgvuldig samen. Ik ben heel erg tevreden!"},
+    {name:"Jill Jansen", text:"Sinds een half jaar word ik gecoacht door Michel van YourProgram. Ik had al langer het gevoel dat ik stilstond met mijn trainingen, maar sinds ik hier begonnen ben, is er weer veel progressie! Ook in een periode van een blessure werd er goed meegedacht om zo goed mogelijk door te blijven trainen. De begeleiding en trainingen zijn top. Daarnaast zijn de maandelijkse teamtrainingen motiverend en is er een hele fijne sfeer! Kortom, ik zou het iedereen aanraden om hier coaching te volgen!"},
+    {name:"Ricardo Gerrets", text:"Soms wilde ik net even wat sneller doelen bereiken in de sport CrossFit. Zo wilde ik meer verdieping in de gymnastics movements en sterker worden in het gewichtheffen. Middels 1-op-1-sessies merkte ik al zeer snel progressie. Sinds de oprichting van YourProgram werk ik een wekelijks persoonlijk programma uit, speciaal voor mij geschreven door Michel Bakker om verder te groeien als atleet. Het is vaak hard werken, maar het loont 100%! Bij YourProgram weten ze precies wat jij nodig hebt als atleet en waar je sterktes en zwaktes liggen. Eén ding is zeker: zonder YourProgram had ik een hele andere en zeker minder fitte versie van mijzelf geweest."},
+    {name:"Bianca Siegers", text:"Sinds de start van YourProgram in september 2017 train ik onder de vleugels van coach Michel Bakker. Ik begon met één doel: mijn eerste pull-up. Na drie maanden was het raak en sindsdien ben ik niet meer te stoppen.\n\nTalloze PR's, individuele internationale Masters-competities zoals de Marbella Championships en de Lowlands Throwdown, fanatieke buddy-wedstrijden en knallen met ons Team Booty's & Biceps op de Battle of Amsterdam en de Battle of the North.\n\nDe sfeer? Gezellig, maar altijd met een scherp randje van ambitie. Tijdens de maandelijkse teamtrainingen word je omringd door atleten die allemaal willen vlammen, dat werkt aanstekelijk. Je wordt uitgedaagd, gepusht, gevloerd en weer opgebouwd."}
   ];
-  /* ===== EINDE AANPASBAAR ===== */
-  var track=document.getElementById('revTrack'),dotsWrap=document.getElementById('revDots'),vp=document.getElementById('revVp'),ratingEl=document.getElementById('revRating');
-  if(ratingEl) ratingEl.textContent=RATING?(" \u00b7 "+RATING):"";
+  var track=document.getElementById('revTrack'),dotsWrap=document.getElementById('revDots'),vp=document.getElementById('revVp');
   if(!track||!REVIEWS.length){return;}
   function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   REVIEWS.forEach(function(r,i){
-    var stars=Math.max(0,Math.min(5,r.stars||5)),s=new Array(stars+1).join('\u2605');
     var card=document.createElement('div');card.className='rev-card';
-    card.innerHTML='<div class="rev-stars">'+s+'</div><div class="rev-text">'+esc(r.text||'')+'</div>'+
-      '<div class="rev-meta"><span class="rev-ava">'+esc((r.name||'?').charAt(0).toUpperCase())+'</span>'+
-      '<span><span class="rev-name">'+esc(r.name||'')+'</span><br><span class="rev-when">'+esc(r.when||'')+'</span></span></div>';
+    card.innerHTML='<div class="rev-stars">\u2605\u2605\u2605\u2605\u2605</div>'+
+      '<div class="rev-text">'+esc(r.text).replace(/\n/g,'<br>')+'</div>'+
+      '<div class="rev-meta"><span class="rev-ava">'+esc(r.name.charAt(0).toUpperCase())+'</span><span class="rev-name">'+esc(r.name)+'</span></div>';
     track.appendChild(card);
     var dot=document.createElement('button');dot.className='rev-dot'+(i===0?' active':'');dot.setAttribute('aria-label','Review '+(i+1));
     dot.addEventListener('click',function(){go(i,true);});dotsWrap.appendChild(dot);
   });
-  var idx=0,timer=null,dots=dotsWrap.children;
-  function render(){track.style.transform='translateX(-'+(idx*100)+'%)';for(var k=0;k<dots.length;k++){dots[k].className='rev-dot'+(k===idx?' active':'');}}
-  function go(i,m){idx=(i+REVIEWS.length)%REVIEWS.length;render();if(m){restart();}}
-  function next(){go(idx+1);}
-  function start(){if(REVIEWS.length>1&&!timer){timer=setInterval(next,INTERVAL_MS);}}
+  var idx=0,timer=null,cards=track.children,dots=dotsWrap.children;
+  function setH(){if(cards[idx])vp.style.height=cards[idx].offsetHeight+'px';}
+  function render(){track.style.transform='translateX(-'+(idx*100)+'%)';for(var k=0;k<dots.length;k++){dots[k].className='rev-dot'+(k===idx?' active':'');}setH();}
+  function go(i,m){idx=(i+REVIEWS.length)%REVIEWS.length;render();if(m){stop();start();}}
+  function start(){if(REVIEWS.length>1&&!timer){timer=setInterval(function(){go(idx+1);},INTERVAL_MS);}}
   function stop(){if(timer){clearInterval(timer);timer=null;}}
-  function restart(){stop();start();}
   vp.addEventListener('mouseenter',stop);vp.addEventListener('mouseleave',start);
+  window.addEventListener('resize',setH);window.addEventListener('load',setH);
   document.addEventListener('visibilitychange',function(){document.hidden?stop():start();});
-  render();start();
+  render();start();setTimeout(setH,400);
 })();
 </script>
 </body>
