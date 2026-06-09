@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Win-actie · CrossFit-schoenen naar keuze · YourProgram</title>
+<meta name="description" content="Laat een Google-review achter over je ervaring met YourProgram en maak kans op een paar CrossFit-schoenen naar keuze t.w.v. €150,-. En sowieso een gratis shirt! Meedoen kan t/m zaterdag 27 juni." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0b0907; --ink-2:#15110c;
+    --gold-1:#f8e6a6; --gold-2:#eac256; --gold-3:#bd8a26;
+    --gold-grad:linear-gradient(135deg,#b07d1d 0%,#f8e6a6 40%,#e0b54e 62%,#9c6c18 100%);
+    --cream:#f2ebdc; --muted-txt:#a59b88; --line:rgba(242,235,220,.12);
+    --card:rgba(255,255,255,.035);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(1050px 580px at 50% -8%, rgba(234,194,86,.18), transparent 62%),
+      radial-gradient(700px 520px at 12% 18%, rgba(189,138,38,.08), transparent 55%),
+      linear-gradient(180deg,var(--ink) 0%, var(--ink-2) 50%, var(--ink) 100%);
+    background-attachment:fixed; color:var(--cream);
+    font-family:'Hanken Grotesk',system-ui,sans-serif; font-size:17px; line-height:1.65;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+  .gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  header{padding:36px 0 6px;text-align:center}
+  .ypmark{display:inline-flex;align-items:baseline;gap:8px;font-family:'Anton',sans-serif;text-transform:uppercase;line-height:1}
+  .ypmark .word{font-size:clamp(30px,7vw,52px);letter-spacing:.01em;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .yptag{margin-top:6px;font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:.26em;text-transform:uppercase;font-size:11px;color:var(--muted-txt)}
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;margin-top:24px;font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:.26em;text-transform:uppercase;font-size:12px;color:var(--gold-2)}
+  .eyebrow::before,.eyebrow::after{content:"";width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-3))}
+  .eyebrow::after{background:linear-gradient(90deg,var(--gold-3),transparent)}
+  .hero{text-align:center;padding:14px 0}
+  .hero h1{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.01em;font-size:clamp(38px,8.4vw,76px);margin:14px 0 0}
+  .hero h1 .small{display:block;font-size:.46em;letter-spacing:.16em;color:var(--muted-txt);margin-top:8px}
+  .value{font-family:'Anton',sans-serif;font-size:clamp(30px,7vw,52px);margin-top:18px;letter-spacing:.02em}
+  .sub{margin-top:10px;font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:clamp(15px,3.2vw,19px)}
+  .sub .g{color:var(--gold-2)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:15px;text-decoration:none;border-radius:3px;padding:16px 28px;transition:transform .15s ease, box-shadow .15s ease}
+  .btn-gold{background:var(--gold-grad);color:#211803;box-shadow:0 10px 34px rgba(234,194,86,.28)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(234,194,86,.4)}
+  .btn-ghost{color:var(--cream);border:1px solid var(--line);background:var(--card)}
+  .btn-ghost:hover{transform:translateY(-2px);border-color:rgba(242,235,220,.3)}
+  .btn .arrow{transition:transform .15s}
+  .btn:hover .arrow{transform:translateX(3px)}
+  .shirt-pill{display:inline-block;margin-top:28px;background:var(--gold-grad);color:#211803;font-family:'Archivo',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(15px,3.4vw,20px);padding:12px 22px;border-radius:8px;transform:rotate(-1.2deg);box-shadow:0 0 0 1px rgba(248,230,166,.5), 0 14px 40px rgba(234,194,86,.3)}
+  section{padding:46px 0}
+  .divider-wrap{display:flex;justify-content:center}
+  .divider{height:1px;width:100%;max-width:920px;margin:0 24px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+  .label{font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:.24em;text-transform:uppercase;font-size:11.5px;color:var(--gold-2);margin-bottom:14px;text-align:center}
+  h2{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(28px,6vw,44px);line-height:1;letter-spacing:.01em;text-align:center;margin-bottom:6px}
+  .intro{text-align:center;color:var(--muted-txt);max-width:560px;margin:0 auto}
+  .steps{display:grid;gap:14px;margin-top:30px}
+  @media(min-width:640px){.steps{grid-template-columns:repeat(2,1fr)}}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .step .n{font-family:'Anton',sans-serif;font-size:30px;line-height:1;margin-bottom:10px;display:block}
+  .step h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;margin-bottom:6px}
+  .step p{color:var(--muted-txt);font-size:15.5px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .chip{border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:13.5px;background:rgba(255,255,255,.025)}
+  .shoes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px}
+  @media(min-width:760px){.shoes{grid-template-columns:repeat(4,1fr)}}
+  .shoe{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .shoe .imgwrap{position:relative;aspect-ratio:1/1}
+  .shoe .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:linear-gradient(160deg,rgba(234,194,86,.14),rgba(255,255,255,.03))}
+  .shoe .ph svg{width:58px;height:58px;opacity:.9}
+  .shoe .ph .brand{font-family:'Archivo',sans-serif;font-weight:800;font-size:13px;letter-spacing:.03em;color:var(--cream)}
+  .shoe img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f5f5f3;padding:12px;z-index:1}
+  .shoe .name{padding:11px 12px;text-align:center;border-top:1px solid var(--line)}
+  .shoe .name b{font-family:'Archivo',sans-serif;font-weight:800;font-size:13.5px;display:block}
+  .shoe .name span{font-size:12px;color:var(--gold-2)}
+  .unlock{display:grid;gap:12px;margin-top:30px}
+  @media(min-width:560px){.unlock{grid-template-columns:1fr 1fr}}
+  .u{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .u .big{font-family:'Anton',sans-serif;font-size:38px;line-height:1}
+  .u .txt{font-size:14.5px;line-height:1.4}
+  .u .txt b{color:var(--cream)}
+  .deadline{display:flex;flex-wrap:wrap;align-items:center;gap:18px 34px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 28px;margin-top:14px;justify-content:center;text-align:center}
+  .deadline .date{font-family:'Anton',sans-serif;font-size:clamp(34px,9vw,54px);line-height:.9}
+  .deadline .meta{color:var(--muted-txt);font-size:15.5px}
+  .deadline .meta b{color:var(--cream)}
+  .terms{counter-reset:t;margin-top:26px;display:grid;gap:0;max-width:740px;margin-left:auto;margin-right:auto}
+  .term{border-top:1px solid var(--line);padding:22px 0 20px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+  .term:last-of-type{border-bottom:1px solid var(--line)}
+  .term::before{counter-increment:t;content:counter(t,decimal-leading-zero);font-family:'Anton',sans-serif;font-size:22px;line-height:1.2;min-width:34px;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .term h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:17.5px;margin-bottom:4px}
+  .term p{color:var(--muted-txt);font-size:15.5px}
+  .term p strong{color:var(--cream)}
+  .reviews-sec{padding:6px 0 2px;text-align:center}
+  .gbadge{display:inline-flex;align-items:center;gap:10px;margin:0 auto 18px;color:var(--muted-txt);font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:12px}
+  .gbadge .g{width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--gold-grad);color:#211803;font-family:'Archivo',sans-serif;font-weight:900;font-size:14px}
+  .gbadge .rev-rating{color:var(--gold-2)}
+  .rev-viewport{overflow:hidden;max-width:620px;margin:0 auto;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+  .rev-track{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+  .rev-card{min-width:100%;padding:26px 28px;box-sizing:border-box}
+  .rev-stars{color:var(--gold-2);letter-spacing:2px;font-size:16px}
+  .rev-text{margin:12px 0 16px;color:var(--cream);font-size:16px;line-height:1.6;min-height:104px}
+  .rev-meta{display:flex;align-items:center;gap:10px;justify-content:center;text-align:left}
+  .rev-ava{width:36px;height:36px;border-radius:50%;background:var(--gold-grad);color:#211803;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;flex:none}
+  .rev-name{font-family:'Archivo',sans-serif;font-weight:700;font-size:14.5px}
+  .rev-when{color:var(--muted-txt);font-size:13px}
+  .rev-dots{display:flex;gap:8px;justify-content:center;margin-top:16px}
+  .rev-dot{width:8px;height:8px;border-radius:50%;border:0;background:rgba(242,235,220,.25);cursor:pointer;padding:0;transition:background .2s,transform .2s}
+  .rev-dot.active{background:var(--gold-2);transform:scale(1.25)}
+  footer{padding:50px 0 64px;text-align:center}
+  .ffu{margin-top:16px;font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:.22em;text-transform:uppercase;font-size:12.5px;color:var(--gold-2)}
+  .foot-meta{color:var(--muted-txt);font-size:13.5px;margin-top:10px}
+  .foot-meta a{color:var(--cream);text-decoration:none;border-bottom:1px solid var(--line)}
+  .foot-cta{margin-top:26px}
+  .rv{opacity:0;transform:translateY(16px);animation:rv .7s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes rv{to{opacity:1;transform:none}}
+  .d1{animation-delay:.05s}.d2{animation-delay:.13s}.d3{animation-delay:.21s}.d4{animation-delay:.29s}.d5{animation-delay:.37s}
+  @media (prefers-reduced-motion:reduce){.rv{animation:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="rv d1">
+      <div class="ypmark"><span class="word">YourProgram</span></div>
+      <div class="yptag">1-op-1 online coaching</div>
+    </div>
+    <div><span class="eyebrow rv d2">Win-actie · voor YourProgram-atleten</span></div>
+  </header>
+
+  <section class="hero" style="padding-top:14px">
+    <h1 class="rv d3">Maak kans op een paar<br><span class="gold">CrossFit-schoenen</span><span class="small">naar keuze</span></h1>
+    <div class="value gold rv d3">T.W.V. €150,-</div>
+    <p class="sub rv d4">Laat een <span class="g">Google-review</span> achter</p>
+    <div class="cta-row rv d4">
+      <a class="btn btn-gold" href="https://g.page/r/CYn4h4HSQtxBEAE/review" target="_blank" rel="noopener">Laat je review achter <span class="arrow">&rarr;</span></a>
+      <a class="btn btn-ghost" href="#voorwaarden">Lees de voorwaarden</a>
+    </div>
+    <div class="rv d5"><span class="shirt-pill">+ en sowieso een gratis shirt!</span></div>
+  </section>
+</div>
+
+<div class="divider-wrap"><div class="divider"></div></div>
+
+<div class="wrap">
+  <section class="reviews-sec">
+    <div class="gbadge"><span class="g">G</span><span>Reviews van onze atleten op Google</span><span class="rev-rating" id="revRating"></span></div>
+    <div class="rev-viewport" id="revVp"><div class="rev-track" id="revTrack"></div></div>
+    <div class="rev-dots" id="revDots"></div>
+  </section>
+</div>
+
+<div class="divider-wrap"><div class="divider"></div></div>
+
+<div class="wrap">
+  <section>
+    <div class="label">Zo doe je mee</div>
+    <h2>In 3 stappen</h2>
+    <div class="steps">
+      <div class="step"><span class="n gold">1</span><h3>Klik &amp; schrijf</h3><p>Klik op de knop en schrijf een Google-review van minimaal 50 woorden over jouw ervaring met de online coaching van YourProgram.</p></div>
+      <div class="step"><span class="n gold">2</span><h3>Je gratis shirt</h3><p>Klaar? Dan regelen we jouw gratis shirt, voor iedereen die meedoet.</p></div>
+      <div class="step"><span class="n gold">3</span><h3>De trekking in</h3><p>Met je review zit je automatisch in de trekking voor een paar nieuwe CrossFit-schoenen naar keuze.</p></div>
+      <div class="step"><span class="n gold">&#9733;</span><h3>Waar schrijf je over?</h3><p>Geen idee waar te beginnen? Laat je inspireren:</p>
+        <div class="chips"><span class="chip">Hoe lang je coaching volgt</span><span class="chip">Waarom je begon</span><span class="chip">Je resultaten &amp; PR's</span><span class="chip">De begeleiding</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="divider-wrap"><div class="divider"></div></div>
+
+<div class="wrap">
+  <section>
+    <div class="label">De hoofdprijs</div>
+    <h2>Schoenen naar keuze</h2>
+    <p class="intro">Win jij? Dan kies je zelf je favoriete paar t.w.v. &euro;150,-. Vier toppers om uit te kiezen:</p>
+    <div class="shoes">
+      <figure class="shoe">
+        <div class="imgwrap">
+          <div class="ph"><svg viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 28c0-2 1-3 3-3l14-2 9-9c1-1 3-1 4 0l4 5 18 6c3 1 5 3 5 6v2c0 2-2 4-4 4H7c-2 0-4-2-4-4v-5z" stroke="#eac256" stroke-width="2" stroke-linejoin="round"/><path d="M22 23l6 6M30 19l5 6" stroke="#eac256" stroke-width="2" stroke-linecap="round"/></svg><span class="brand">Nike</span></div>
+          <img src="https://www.shopboxbasics.com/cdn/shop/files/AURORA_DZ2537-001_PHCTH001-2000_21b1fa41-93ee-4d42-9599-f2acd8787576.png?v=1691435028" alt="Nike Metcon 9" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" />
+        </div>
+        <figcaption class="name"><b>Nike</b><span>Metcon 9</span></figcaption>
+      </figure>
+      <figure class="shoe">
+        <div class="imgwrap">
+          <div class="ph"><svg viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 28c0-2 1-3 3-3l14-2 9-9c1-1 3-1 4 0l4 5 18 6c3 1 5 3 5 6v2c0 2-2 4-4 4H7c-2 0-4-2-4-4v-5z" stroke="#eac256" stroke-width="2" stroke-linejoin="round"/><path d="M22 23l6 6M30 19l5 6" stroke="#eac256" stroke-width="2" stroke-linecap="round"/></svg><span class="brand">Reebok</span></div>
+          <img src="https://www.shopboxbasics.com/cdn/shop/files/shopify-featured-shoe_0000s_0007_100209359_BLT_eCom.jpg?v=1734472091" alt="Reebok Nano X5" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" />
+        </div>
+        <figcaption class="name"><b>Reebok</b><span>Nano X5</span></figcaption>
+      </figure>
+      <figure class="shoe">
+        <div class="imgwrap">
+          <div class="ph"><svg viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 28c0-2 1-3 3-3l14-2 9-9c1-1 3-1 4 0l4 5 18 6c3 1 5 3 5 6v2c0 2-2 4-4 4H7c-2 0-4-2-4-4v-5z" stroke="#eac256" stroke-width="2" stroke-linejoin="round"/><path d="M22 23l6 6M30 19l5 6" stroke="#eac256" stroke-width="2" stroke-linecap="round"/></svg><span class="brand">TYR</span></div>
+          <img src="https://www.shopboxbasics.com/cdn/shop/files/shopify-_0000s_0005_CXT2-061_alt05.jpg?v=1756423238" alt="TYR CXT-2 Trainer" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" />
+        </div>
+        <figcaption class="name"><b>TYR</b><span>CXT-2 Trainer</span></figcaption>
+      </figure>
+      <figure class="shoe">
+        <div class="imgwrap">
+          <div class="ph"><svg viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 28c0-2 1-3 3-3l14-2 9-9c1-1 3-1 4 0l4 5 18 6c3 1 5 3 5 6v2c0 2-2 4-4 4H7c-2 0-4-2-4-4v-5z" stroke="#eac256" stroke-width="2" stroke-linejoin="round"/><path d="M22 23l6 6M30 19l5 6" stroke="#eac256" stroke-width="2" stroke-linecap="round"/></svg><span class="brand">Adidas</span></div>
+          <img src="https://assets.adidas.com/images/c_fill,g_auto,w_1200,h_630,f_auto,q_auto/w_600,f_auto,q_auto/6c0bc0fce71847b686d71ba330ede87f_9366/Dropset_3_Training_Shoes_White_ID8633_HM1.jpg" alt="Adidas Dropset 3" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" />
+        </div>
+        <figcaption class="name"><b>Adidas</b><span>Dropset 3</span></figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+<div class="divider-wrap"><div class="divider"></div></div>
+
+<div class="wrap">
+  <section>
+    <div class="label">Hoe meer reviews, hoe meer winnaars</div>
+    <h2>Extra schoenen</h2>
+    <div class="unlock">
+      <div class="u"><span class="big gold">2&times;</span><span class="txt">Halen we als team <b>meer dan 10 reviews</b>, dan verloten we <b>2 paar</b> schoenen.</span></div>
+      <div class="u"><span class="big gold">3&times;</span><span class="txt">Bij <b>meer dan 20 reviews</b> maar liefst <b>3 paar</b> schoenen te winnen.</span></div>
+    </div>
+    <div class="deadline">
+      <div>
+        <div class="label" style="margin-bottom:4px">Meedoen kan t/m</div>
+        <div class="date"><span class="gold">ZA 27 JUNI</span></div>
+      </div>
+      <div class="meta">Trekking om <b>12:00 uur</b> tijdens de teamtraining.<br>Winnaar krijgt persoonlijk bericht.</div>
+    </div>
+  </section>
+</div>
+
+<div class="divider-wrap"><div class="divider"></div></div>
+
+<div class="wrap">
+  <section id="voorwaarden">
+    <div class="label">Het kleine lettertje</div>
+    <h2>Voorwaarden</h2>
+    <div class="terms">
+      <div class="term"><div><h3>Wie kan meedoen</h3><p>De actie is <strong>voor YourProgram-atleten</strong> die onze 1-op-1 online coaching volgen.</p></div></div>
+      <div class="term"><div><h3>Hoe je meedoet</h3><p>Plaats een <strong>openbare Google-review van minimaal 50 woorden</strong> over je eigen ervaring met YourProgram. Reviews korter dan 50 woorden tellen helaas niet mee.</p></div></div>
+      <div class="term"><div><h3>Gratis shirt voor iedereen</h3><p>Iedereen die een geldige review (min. 50 woorden) plaatst, krijgt een <strong>gratis shirt</strong>. We regelen 'm met je.</p></div></div>
+      <div class="term"><div><h3>De trekking</h3><p>Onder alle deelnemers verloten we <strong>CrossFit-schoenen naar keuze t.w.v. &euro;150,-</strong> (Nike Metcon, Reebok Nano X5, TYR CXT-2 Trainer of Adidas Dropset 3).</p></div></div>
+      <div class="term"><div><h3>Extra schoenen te winnen</h3><p>Bij <strong>meer dan 10 reviews</strong> verloten we 2 paar schoenen, bij <strong>meer dan 20 reviews</strong> 3 paar. Hoe meer reviews, hoe meer winnaars.</p></div></div>
+      <div class="term"><div><h3>Deadline &amp; trekking</h3><p>Meedoen kan <strong>t/m zaterdag 27 juni</strong>. De trekking is <strong>27 juni om 12:00 uur tijdens de teamtraining</strong>. Winnaars worden persoonlijk op de hoogte gebracht.</p></div></div>
+      <div class="term"><div><h3>Al eerder een review geschreven?</h3><p>Google staat <strong>1 review per e-mailadres</strong> toe. Plaats een nieuwe review via een ander Google-account en <strong>app ons even</strong>, dan voegen we je toe. Een bestaande review aanpassen telt helaas niet mee.</p></div></div>
+    </div>
+  </section>
+</div>
+
+<div class="divider-wrap"><div class="divider"></div></div>
+
+<div class="wrap">
+  <footer>
+    <div class="ypmark"><span class="word">YourProgram</span></div>
+    <div class="ffu">1-op-1 online coaching voor CrossFit-atleten</div>
+    <div class="foot-meta">Meer info &rarr; <a href="https://www.yourprogram.nl" target="_blank" rel="noopener">yourprogram.nl</a> &middot; <a href="https://www.instagram.com/yourprogramnl/" target="_blank" rel="noopener">@yourprogramnl</a></div>
+    <div class="foot-cta"><a class="btn btn-gold" href="https://g.page/r/CYn4h4HSQtxBEAE/review" target="_blank" rel="noopener">Laat je review achter <span class="arrow">&rarr;</span></a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  /* ===== AANPASBAAR — vul hier je echte Google-reviews in ===== */
+  var INTERVAL_MS = 5000;
+  var RATING = "";
+  var REVIEWS = [
+    { name:"Voorbeeld 1", stars:5, when:"Vervang door echte review",
+      text:"Plak hier een echte Google-review over je ervaring met YourProgram en pas de naam hierboven aan." },
+    { name:"Voorbeeld 2", stars:5, when:"Vervang door echte review",
+      text:"Tweede echte review hier. Voeg zoveel reviews toe als je wilt door regels in deze lijst bij te zetten." },
+    { name:"Voorbeeld 3", stars:5, when:"Vervang door echte review",
+      text:"Derde echte review hier. Tip: kies je mooiste, niet te lange reviews voor de beste weergave." }
+  ];
+  /* ===== EINDE AANPASBAAR ===== */
+  var track=document.getElementById('revTrack'),dotsWrap=document.getElementById('revDots'),vp=document.getElementById('revVp'),ratingEl=document.getElementById('revRating');
+  if(ratingEl) ratingEl.textContent=RATING?(" \u00b7 "+RATING):"";
+  if(!track||!REVIEWS.length){return;}
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  REVIEWS.forEach(function(r,i){
+    var stars=Math.max(0,Math.min(5,r.stars||5)),s=new Array(stars+1).join('\u2605');
+    var card=document.createElement('div');card.className='rev-card';
+    card.innerHTML='<div class="rev-stars">'+s+'</div><div class="rev-text">'+esc(r.text||'')+'</div>'+
+      '<div class="rev-meta"><span class="rev-ava">'+esc((r.name||'?').charAt(0).toUpperCase())+'</span>'+
+      '<span><span class="rev-name">'+esc(r.name||'')+'</span><br><span class="rev-when">'+esc(r.when||'')+'</span></span></div>';
+    track.appendChild(card);
+    var dot=document.createElement('button');dot.className='rev-dot'+(i===0?' active':'');dot.setAttribute('aria-label','Review '+(i+1));
+    dot.addEventListener('click',function(){go(i,true);});dotsWrap.appendChild(dot);
+  });
+  var idx=0,timer=null,dots=dotsWrap.children;
+  function render(){track.style.transform='translateX(-'+(idx*100)+'%)';for(var k=0;k<dots.length;k++){dots[k].className='rev-dot'+(k===idx?' active':'');}}
+  function go(i,m){idx=(i+REVIEWS.length)%REVIEWS.length;render();if(m){restart();}}
+  function next(){go(idx+1);}
+  function start(){if(REVIEWS.length>1&&!timer){timer=setInterval(next,INTERVAL_MS);}}
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  function restart(){stop();start();}
+  vp.addEventListener('mouseenter',stop);vp.addEventListener('mouseleave',start);
+  document.addEventListener('visibilitychange',function(){document.hidden?stop():start();});
+  render();start();
+})();
+</script>
+</body>
+</html>
